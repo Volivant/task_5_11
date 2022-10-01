@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: url('https://unsplash.com/photos/WYd_PkCa1BY/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY0NjAwMjQ3&force=true&w=1920') bottom no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: rgb(0, 90, 0);
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+footer .links {
+    margin-bottom: 50px;
+}
+
+footer .links > a {
+    color: rgb(70, 70, 70);
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.copyright {
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer .copyright > span > a {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+.news {
+    background-color: #fff;
+    padding: 5px 0 2px;
+}
+
+article {
+    width: 768px;
+    margin: 0 auto 5px;
+    padding: 2px 15px;
+    border-bottom: 1px solid gray;
+}
+
+article a {
+    color: #212121;
+    text-decoration: none;
+}
+
+article a :hover {
+    color: #0085a1;
+}
+
+article h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 5px;
+}
+
+.article-meta {
+    color: gray;
+    margin-bottom: 5px;
+}
+
+article img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/*Так как нумерация начинается с 0, то пишем odd - нечетные, а получаем четные*/
+.news:nth-child(odd) {
+    background-color: rgb(140, 140, 255);
+}
+
+/*Интересно, а как можно выделить слово New другим цветом*/
+.news:nth-child(-n+3) > article > a > h2::before {
+    content: "New ";
+}
